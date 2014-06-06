@@ -1,0 +1,95 @@
+extends layout
+
+block body
+
+        .row
+            .col-sm-8.col-md-8
+                // STUDENT LIST
+                h2 Student List
+                #studentList
+                    table.table
+                        thead
+                            th StudentName
+                            th Delete?
+                        tbody
+                // /STUDENT LIST
+
+
+            .col-sm-4.col-md-4
+                form.form-inline.jumbotron
+                    legend Add Student
+                    #addStudent
+                        fieldset
+                            input#inputStudentName.form-control(type='text', placeholder='Student name')
+                            button#btnAddStudent.btn.btn-primary Add Student
+                        //ADD STUDENT
+        .row
+            .col-sm-8.col-md-8
+                // GROUP LIST
+                h2 Group List
+                #groupList
+                    table.table
+                        thead
+                            th GroupName
+                            th Delete?
+                        tbody
+                // /GROUP LIST
+            
+            .col-sm-4.col-md-4
+            
+                // CREATE GROUP
+                form.form-inline.jumbotron
+                    legend Create Group
+                    #createGroup
+                        fieldset
+                            input#inputGroupName.form-control(type='text', placeholder='Group name')
+                            br
+                            button#btnCreateGroup.btn.btn-primary Create Group
+                            // /CREATE GROUP
+        
+        .row
+            .col-sm-8.col-md-8
+                // GROUP/STUDENT LIST
+                h2 Group / Student List
+                #groupStudentList
+                    table.table
+                        thead
+                            th GroupName
+                            th StudentName
+                            th Remove Student?
+                        tbody
+                // /GROUP/STUDENT LIST
+            .col-sm-4.col-md-4
+                // ADD STUDENT TO GROUP
+                form.form-inline.jumbotron
+                    legend Add Student to Group
+                    #addStudentToGroup
+                        fieldset
+                            input#inputStudentGroupName.form-control(type='text', placeholder='Student name')
+                            input#inputGroupStudentName.form-control(type='text', placeholder='Group name')
+                            br
+                            button#btnAddStudentToGroup.btn.btn-primary Add Student to Group
+                // /ADD STUDENT TO GROUP
+        
+        .row
+            .col-sm-8.col-md-8
+                // FORUM
+                h2 Course forum notes
+                #forumNotes
+                    table.table
+                        thead
+                            th Notes
+                        tbody
+                // /FORUM
+                
+            .col-sm-4.col-md-4
+                // ADD FORUM NOTE
+                form.form-inline.jumbotron#addForumNote
+                    legend Add Forum note
+                    #addForumNote
+                        fieldset
+                            textarea#textareaForumNote.form-control(type='text', placeholder='Enter your note here')
+                            button#btnAddForumNote.btn.btn-primary Add Note
+                // /ADD FORUM NOTE
+
+    // /WRAPPER       
